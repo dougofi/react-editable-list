@@ -28,7 +28,7 @@ class Users extends React.Component{
           }
           return tempUser
       })
-      this.setState({
+        this.setState({
           users: newState
       })
     } 
@@ -107,19 +107,13 @@ class Users extends React.Component{
             newUserName: undefined,
             newUser: {id: ''}
         }); 
-
-    
-
-         
-
-
     }
 
     render(){
         return(
             <div>
-            <button onClick={this.makeYounger}>Make Us Younger</button>
-            <br />
+             <button onClick={this.makeYounger}>Make Us Younger</button>
+                     <br />
                 <h2>{this.props.title}</h2>
                 <form ref={(input) => this.smallForm = input} onSubmit={this.addPerson}>
                 <input type="text" placeholder="name"
@@ -132,20 +126,12 @@ class Users extends React.Component{
                 />
                    <button type="submit">Add New Customer</button>
                 </form>
-                
-                 
                 {this.state.users.map((user,index) => {
                     return(
-                        
-                        <User key={user.id} age={user.age} value={user.name} onChangeHandler={this.onChangeHandler.bind(this,user.id)} deletePerson={this.deletePerson.bind(this,index)}>{user.name}</User>
-                        
-                        
-                    )
-                    
+                        <User key={user.id} age={user.age} value={user.name} onChangeHandler={this.onChangeHandler.bind(this,user.id)} deletePerson={this.deletePerson.bind(this,index)}>{user.name}</User>   
+                    )    
                 })}
-                
-                
-               
+ 
             </div>
         )
     }

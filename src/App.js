@@ -3,11 +3,7 @@ import Users from './components/Users';
 import './App.css';
 
 class App extends React.Component{
-
-
-
-  
-  render(){
+render(){
     return (
       <div className="App">
         <Users title="List of Customers"/>
@@ -16,6 +12,4 @@ class App extends React.Component{
   }
 }
  
-
-
 export default App;
